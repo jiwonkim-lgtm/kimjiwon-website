@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Project 3 | AI Hand Gesture Rock Paper Scissors</title>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#0f172a;
+  color:white;
+  line-height:1.8;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+  padding:80px 0;
+}
+
+h1{
+  font-size:56px;
+  margin-bottom:15px;
+  color:#38bdf8;
+}
+
+h2{
+  font-size:34px;
+  margin-bottom:20px;
+  color:#7dd3fc;
+}
+
+.subtitle{
+  color:#cbd5e1;
+  margin-bottom:50px;
+  font-size:20px;
+}
+
+.section{
+  margin-bottom:80px;
+}
+
+.card{
+  background:#1e293b;
+  padding:35px;
+  border-radius:28px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(320px,1fr));
+  gap:30px;
+}
+
+img{
+  width:100%;
+  border-radius:20px;
+}
+
+p{
+  color:#dbe4f0;
+  font-size:18px;
+}
+
+ul{
+  padding-left:25px;
+}
+
+li{
+  margin-bottom:12px;
+  font-size:18px;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:16px 28px;
+  border-radius:14px;
+  background:#38bdf8;
+  color:black;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.highlight{
+  color:#38bdf8;
+  font-weight:bold;
+}
+
+footer{
+  text-align:center;
+  padding:50px;
+  color:#94a3b8;
+  background:#020617;
+}
+
+@media(max-width:768px){
+
+h1{
+  font-size:40px;
+}
+
+h2{
+  font-size:28px;
+}
+
+p,li{
+  font-size:16px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>
+AI Hand Gesture Rock–Paper–Scissors
+</h1>
+
+<p class="subtitle">
+Author: Kim Jiwon (20260957) <br>
+KENTECH | School of Energy Engineering
+</p>
+
+<!-- INTRO -->
+
+<section class="section">
+
+<h2>
+1. Motivation & Problem Definition
+</h2>
+
+<div class="card">
+
+<p>
+This project was developed to explore how
+Artificial Intelligence and Computer Vision
+can recognize human hand gestures in real time.
+
+The main objective was to design a system
+that automatically classifies hand gestures
+(Rock, Paper, Scissors) through webcam input
+and enables interactive gameplay between
+a human player and a computer.
+
+This project also aimed to understand
+the relationship between data collection,
+AI model training, prediction, and
+real-time interaction systems.
+</p>
+
+</div>
+</section>
+
+<!-- METHOD -->
+
+<section class="section">
+
+<h2>
+2. Methodology
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3 class="highlight">
+Computer Vision
+</h3>
+
+<p>
+OpenCV was used to capture webcam images
+and detect user hand gestures in real time.
+The system continuously receives image frames
+and processes them for prediction.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 class="highlight">
+Deep Learning Model
+</h3>
+
+<p>
+A Keras-based classification model
+was trained to recognize three hand
+gestures: rock, paper, and scissors.
+
+The model predicts user movement
+with probability values in real time.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 class="highlight">
+Game Logic
+</h3>
+
+<p>
+The predicted hand gesture is compared
+against a computer-generated move,
+and the game result is determined
+through Rock–Paper–Scissors rules.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- VISUALS -->
+
+<section class="section">
+
+<h2>
+3. Experiment & Visual Results
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<img src="images/rocksissorspaper.png">
+
+<h3 class="highlight">
+Concept Illustration
+</h3>
+
+<p>
+Illustration representing interaction
+between humans and AI systems through
+gesture recognition.
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="images/experiment.png">
+
+<h3 class="highlight">
+Real-Time Experiment
+</h3>
+
+<p>
+The webcam system predicts hand gestures
+during live gameplay using AI inference.
+Real-time classification probabilities
+are displayed to the user.
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="images/result.png">
+
+<h3 class="highlight">
+Game Output Result
+</h3>
+
+<p>
+The system compares player gestures
+with computer choices and automatically
+calculates match results.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- RESULTS -->
+
+<section class="section">
+
+<h2>
+4. Results & Discussion
+</h2>
+
+<div class="card">
+
+<ul>
+
+<li>
+Successfully integrated
+<span class="highlight">
+Computer Vision (OpenCV)
+</span>
+and
+<span class="highlight">
+Deep Learning (Keras)
+</span>
+for real-time gesture recognition.
+</li>
+
+<li>
+Achieved approximately
+<span class="highlight">
+83% classification accuracy
+</span>
+under normal conditions.
+</li>
+
+<li>
+Observed limitations in prediction
+accuracy depending on lighting
+conditions and background complexity.
+</li>
+
+<li>
+Demonstrated how AI models can be
+connected to interactive applications.
+</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- APPLICATION -->
+
+<section class="section">
+
+<h2>
+5. Future Applications
+</h2>
+
+<div class="card">
+
+<p>
+This project can be expanded toward
+touchless interaction systems,
+educational AI tools,
+robot-human interaction,
+and gesture-based interfaces.
+
+Future improvements may include:
+
+</p>
+
+<br>
+
+<ul>
+
+<li>Audio feedback integration</li>
+<li>Multi-player interaction systems</li>
+<li>Higher-accuracy AI models</li>
+<li>Advanced object detection systems (YOLO)</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- CONCLUSION -->
+
+<section class="section">
+
+<h2>
+6. Conclusion
+</h2>
+
+<div class="card">
+
+<p>
+This project provided practical experience
+in combining programming, data,
+computer vision, and artificial intelligence.
+
+It demonstrated how AI models can move
+beyond theoretical concepts and be applied
+to interactive real-world systems.
+</p>
+
+<a href="index.html" class="btn">
+← Back to Home
+</a>
+
+</div>
+
+</section>
+
+</div>
+
+<footer>
+
+© 2026 Kim Jiwon | Project 3
+
+</footer>
+
+</body>
+</html>

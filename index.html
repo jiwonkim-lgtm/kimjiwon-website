@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Kim Jiwon | Research Portfolio</title>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#0f172a;
+  color:white;
+  line-height:1.7;
+}
+
+a{
+  text-decoration:none;
+}
+
+section{
+  padding:100px 10%;
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:60px;
+
+  background:
+  linear-gradient(
+    rgba(15,23,42,0.8),
+    rgba(15,23,42,0.95)
+  ),
+  url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070');
+
+  background-size:cover;
+  background-position:center;
+}
+
+.hero-left{
+  flex:1;
+}
+
+.hero-right{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+.profile-image{
+  width:340px;
+  height:340px;
+  object-fit:cover;
+  border-radius:30px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.4);
+}
+
+.hero h1{
+  font-size:80px;
+  font-weight:900;
+}
+
+.hero h2{
+  font-size:30px;
+  margin:20px 0;
+  color:#cbd5e1;
+}
+
+.hero p{
+  font-size:22px;
+  color:#e2e8f0;
+  max-width:650px;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:35px;
+  padding:16px 30px;
+  background:#38bdf8;
+  border-radius:14px;
+  color:black;
+  font-weight:bold;
+}
+
+/* SECTION TITLE */
+
+.title{
+  font-size:50px;
+  margin-bottom:50px;
+  color:#38bdf8;
+  font-weight:900;
+}
+
+/* GRID */
+
+.grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+/* CARD */
+
+.card{
+  background:#1e293b;
+  border-radius:25px;
+  padding:30px;
+}
+
+.card h3{
+  color:#7dd3fc;
+  margin-bottom:15px;
+}
+
+/* PROJECT CARD */
+
+.project-card{
+  background:#1e293b;
+  border-radius:30px;
+  overflow:hidden;
+  transition:0.3s;
+}
+
+.project-card:hover{
+  transform:translateY(-6px);
+}
+
+.project-card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+}
+
+.project-content{
+  padding:30px;
+}
+
+.project-content h3{
+  color:#7dd3fc;
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+.project-content p{
+  color:#cbd5e1;
+  margin-bottom:25px;
+}
+
+.project-btn{
+  display:inline-block;
+  background:#38bdf8;
+  color:black;
+  padding:12px 20px;
+  border-radius:12px;
+  font-weight:bold;
+}
+
+/* GOAL */
+
+.goal-card{
+  background:#1e293b;
+  border-radius:30px;
+  padding:40px;
+}
+
+.goal-card p{
+  font-size:20px;
+  line-height:2;
+}
+
+/* FOOTER */
+
+footer{
+  background:#020617;
+  text-align:center;
+  padding:50px;
+  color:#94a3b8;
+}
+
+@media(max-width:900px){
+
+.hero{
+  flex-direction:column-reverse;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:55px;
+}
+
+.hero h2{
+  font-size:24px;
+}
+
+.profile-image{
+  width:260px;
+  height:260px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="hero-left">
+
+<h1>Kim Jiwon</h1>
+
+<h2>
+Physics • AI • Scientific Computing • Research
+</h2>
+
+<p>
+Undergraduate student at KENTECH interested in
+Physical AI, robotics, scientific simulation,
+computational physics, and intelligent systems.
+</p>
+
+<a href="#projects" class="btn">
+Explore Research
+</a>
+
+</div>
+
+<div class="hero-right">
+
+<img
+src="images/profile.jpg"
+class="profile-image"
+alt="Kim Jiwon">
+
+</div>
+</section>
+
+<section>
+
+<h2 class="title">
+About Me
+</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Profile</h3>
+<p>
+Kim Jiwon<br>
+Student ID: 20260957<br>
+KENTECH<br>
+School of Energy Engineering
+</p>
+</div>
+
+<div class="card">
+<h3>Research Interests</h3>
+<p>
+• Physics<br>
+• Artificial Intelligence<br>
+• Scientific Simulation<br>
+• Robotics<br>
+• Computational Science
+</p>
+</div>
+
+<div class="card">
+<h3>Contact</h3>
+
+<p>
+Email<br>
+jiwonkim@kentech.ac.kr
+</p>
+
+<br>
+
+<p>
+GitHub<br>
+<a href="https://github.com/jiwonkim-lgtm"
+target="_blank">
+github.com/jiwonkim-lgtm
+</a>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="title">
+Research Projects
+</h2>
+
+<div class="grid">
+
+<!-- PROJECT 1 -->
+
+<div class="project-card">
+
+<img src="images/dolphin_melon.png">
+
+<div class="project-content">
+
+<h3>
+Biomimetic Ultrasonic Direction Control
+</h3>
+
+<p>
+Research on ultrasonic directional control
+through dolphin melon-inspired acoustic
+structures and FDTD simulation.
+</p>
+
+<a href="project1.html" class="project-btn">
+View Full Project →
+</a>
+
+</div>
+</div>
+
+<!-- PROJECT 2 -->
+
+<div class="project-card">
+
+<img src="images/rotor_sail.png">
+
+<div class="project-content">
+
+<h3>
+Rotor Sail Efficiency Optimization
+</h3>
+
+<p>
+Research on optimizing rotor sail operating
+conditions for ship fuel reduction and
+thrust efficiency.
+</p>
+
+<a href="project2.html" class="project-btn">
+View Full Project →
+</a>
+
+</div>
+</div>
+
+<!-- PROJECT 3 -->
+
+<div class="project-card">
+
+<img src="images/rocksissorspaper.png">
+
+<div class="project-content">
+
+<h3>
+AI Hand Gesture Rock–Paper–Scissors
+</h3>
+
+<p>
+AI-based hand gesture recognition system
+using OpenCV and deep learning to play
+real-time Rock–Paper–Scissors.
+</p>
+
+<a href="project3.html" class="project-btn">
+View Full Project →
+</a>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<section>
+
+<h2 class="title">
+Long-Term Goal
+</h2>
+
+<div class="goal-card">
+
+<p>
+My long-term goal is to become a researcher
+working on Physical AI and scientific simulation
+technologies that connect physics, robotics,
+computational science, and intelligent systems.
+</p>
+
+</div>
+</section>
+
+<footer>
+
+© 2026 Kim Jiwon<br>
+Built for EF1003 Personal & Project Webpage Assignment
+
+</footer>
+
+</body>
+</html>
